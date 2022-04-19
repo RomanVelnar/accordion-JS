@@ -1,0 +1,66 @@
+body {
+    background-color: aquamarine;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+}
+
+.accordion {
+    width: 800px;
+    margin: 90px auto;
+    color: black;
+    background-color: aquamarine;
+    padding: 40px 40px;
+}
+
+.accordion .accordion-part {
+    position: relative;
+    margin: 10px 10px;
+}
+
+.accordion-part .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 28px;
+    color: black;
+    cursor: pointer;
+}
+
+.accordion-part .label::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 28px;
+    transform: translateY(-50%);
+}
+
+.accordion-part .content {
+    position: relative;
+    background: whitesmoke;
+    height: 0;
+    font-size: 18px;
+    text-align: justify;
+    width: 780px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.accordion hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid grey;
+}
+
+.accordion .accordion-part.active .content {
+    height: 150px;
+    background-color: aqua;
+}
+
+.accordion .accordion-part.active .label::before {
+    content: '-';
+    font-size: 28px;
+}
